@@ -1,17 +1,19 @@
+body {
+  margin: 0;
+  background-color: #ffffff; /* Default light background */
+  color: #000000; /* Default light text color */
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transition effects */
+}
+
+/* Dark mode styles */
+.dark {
+  background-color: #000000; /* Dark background */
+  color: #ffffff; /* Dark text color */
+}
+
 .theme-container {
-  transition: background-color 0.5s ease;
   padding: 20px;
   text-align: center;
-}
-
-.theme-container.light {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.theme-container.dark {
-  background-color: #000000;
-  color: #ffffff;
 }
 
 .theme-toggle-button {
