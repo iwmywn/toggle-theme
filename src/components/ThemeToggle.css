@@ -1,0 +1,26 @@
+.theme-container {
+  transition: background-color 0.5s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.theme-container.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.theme-container.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: #dddddd;
+}
