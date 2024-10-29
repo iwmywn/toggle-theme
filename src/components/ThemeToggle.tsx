@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
 import "./ThemeToggle.css";
 
 function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState<boolean>(false);
 
   const toggleDark = (event: React.MouseEvent<HTMLButtonElement>) => {
     const isAppearanceTransition =
@@ -23,7 +24,7 @@ function ThemeToggle() {
 
     const transition = document.startViewTransition(async () => {
       setIsDark(!isDark);
-      await new Promise((resolve) => setTimeout(resolve, 0)); // Simulate nextTick
+      await new Promise((resolve) => setTimeout(resolve, 0));
     });
 
     transition.ready.then(() => {
@@ -36,7 +37,7 @@ function ThemeToggle() {
           clipPath: isDark ? [...clipPath].reverse() : clipPath,
         },
         {
-          duration: 400,
+          duration: 3000,
           easing: "ease-out",
           pseudoElement: isDark
             ? "::view-transition-old(root)"
@@ -47,9 +48,12 @@ function ThemeToggle() {
   };
 
   return (
-    <div className={`theme-container ${isDark ? "dark" : "light"}`}>
-      <button onClick={toggleDark}>
-        {isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+    <div
+      style={{ height: "100vh " }}
+      className={`theme-container ${isDark ? "dark" : "light"}`}
+    >
+      <button onClick={toggleDark} className="theme-toggle-button">
+        {isDark ? <FaSun size={24} /> : <FaMoon size={24} />}
       </button>
     </div>
   );
