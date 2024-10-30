@@ -1,44 +1,11 @@
 body {
   margin: 0;
-  background-color: #ffffff; /* Default light background */
-  color: #000000; /* Default light text color */
-  transition: background-color 0.5s ease, color 0.5s ease; /* Transition effects */
+  background-color: #fff;
+  color: #000;
+  /* transition: background-color 0.5s ease, color 0.5s ease; */
 }
 
-/* Dark mode styles */
 .dark {
-  background-color: #000000; /* Dark background */
-  color: #ffffff; /* Dark text color */
-}
-
-.theme-container {
-  padding: 20px;
-  text-align: center;
-}
-
-.theme-toggle-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-  transition: transform 0.3s ease;
-}
-
-.theme-toggle-button:hover {
-  transform: scale(1.1);
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-  background-color: #dddddd;
+  background-color: #000;
+  color: #fff;
 }

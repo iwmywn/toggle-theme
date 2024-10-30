@@ -1,8 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ThemeToggle.css";
 
+/**
+ * Credit to [@hooray](https://github.com/hooray)
+ * @see https://github.com/vuejs/vitepress/pull/2347
+ */
 function ThemeToggle() {
   const [isDark, setIsDark] = useState<boolean>(false);
+
+  useEffect(() => {
+    const htmlElement = document.documentElement;
+    if (isDark) {
+      htmlElement.classList.add("dark");
+    } else {
+      htmlElement.classList.remove("dark");
+    }
+  }, [isDark]);
 
   const toggleDark = (event: React.MouseEvent<HTMLDivElement>) => {
     const isAppearanceTransition =
