@@ -26,6 +26,7 @@ function ThemeToggle() {
       await new Promise((resolve) => setTimeout(resolve, 0));
     });
 
+    // Apply animation only when going to dark mode
     transition.ready.then(() => {
       const clipPath = [
         `circle(0px at ${x}px ${y}px)`,
@@ -33,14 +34,12 @@ function ThemeToggle() {
       ];
       document.documentElement.animate(
         {
-          clipPath: isDark ? [...clipPath].reverse() : clipPath,
+          clipPath: clipPath,
         },
         {
-          duration: 1500,
+          duration: 1800,
           easing: "ease-out",
-          pseudoElement: isDark
-            ? "::view-transition-old(root)"
-            : "::view-transition-new(root)",
+          pseudoElement: "::view-transition-new(root)",
         }
       );
     });
