@@ -26,7 +26,6 @@ function ThemeToggle() {
       await new Promise((resolve) => setTimeout(resolve, 0));
     });
 
-    // Apply animation only when going to dark mode
     transition.ready.then(() => {
       const clipPath = [
         `circle(0px at ${x}px ${y}px)`,
