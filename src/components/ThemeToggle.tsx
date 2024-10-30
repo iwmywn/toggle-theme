@@ -62,7 +62,7 @@ function ThemeToggle() {
       style={{
         height: "100vh",
       }}
-      className={`theme-container ${isDark ? "dark" : "light"}`}
+      className={"theme-container"}
       onDoubleClick={toggleDark}
     ></div>
   );
