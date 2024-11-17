@@ -40,10 +40,10 @@ export default function themeToggle({ event, isDark, setIsDark }: Props) {
     ];
     document.documentElement.animate(
       {
-        clipPath: isDark ? [...clipPath].reverse() : clipPath,
+        clipPath: isDark ? clipPath : [...clipPath].reverse(),
       },
       {
-        duration: 1000,
+        duration: 1500,
         easing: "ease-out",
         pseudoElement: isDark
           ? "::view-transition-new(root)"
