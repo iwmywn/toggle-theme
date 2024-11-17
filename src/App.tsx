@@ -15,7 +15,13 @@ function App() {
     return () => document.body.removeEventListener("dblclick", handleClick);
   }, [isDark]);
 
-  return null;
+  return (
+    <>
+      <div className="min-h-screen flex justify-center items-center">
+        <p className="select-none">hello</p>
+      </div>
+    </>
+  );
 }
 
 export default App;
