@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import themeToggle from "./components/themeToggle";
+import themeToggle from "./theme/themeToggle";
 
 function App() {
   const [isDark, setIsDark] = useState<boolean>(false);
